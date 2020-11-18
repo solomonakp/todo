@@ -1,5 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+// bootstrap
+// import minified css
+import 'bootstrap/dist/css/bootstrap.min.css';
+// importing jquery global method
+import $ from 'jquery';
+// importing Pooper js
+import Popper from 'popper.js';
+// importing minified bootstrap js file
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
