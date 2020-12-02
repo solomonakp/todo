@@ -2,11 +2,25 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { loadUser } from './redux/actions/authActions';
+import ReactNotification from 'react-notifications-component';
+import 'react-notifications-component/dist/theme.css';
 import theme from './components/theme';
+import Auth from './pages/auth';
 class App extends Component {
   render() {
+    const appProps = { ...this.props };
     return (
-      <div className='App'>
+      <Router>
+        <div className='App'>
+          <ReactNotification isMobile={true} breakpoint={425} />
+          <Switch>
+            <Route
+              exact
+              path='/'
+              render={(props) => <Auth {...props} {...appProps} />}
+            />
+          </Switch>
+        </div>
         <style jsx>
           {`
             html,
@@ -48,7 +62,7 @@ class App extends Component {
             }
           `}
         </style>
-      </div>
+      </Router>
     );
   }
 }

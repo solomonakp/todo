@@ -1,8 +1,7 @@
 const theme = {
   fontFamily: {
-    circular: 'Circular std',
-    circularBook: 'Circular Std Book',
-    nunito: 'nunito',
+    circular: 'Roboto',
+    circularBook: 'Roboto',
   },
   colors: {
     primary: '#0c1098',
