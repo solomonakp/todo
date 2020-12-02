@@ -7,17 +7,19 @@
     "@testing-library/react": "^11.1.2",
     "@testing-library/user-event": "^12.2.2",
     "bootstrap": "^4.5.3",
+    "formik": "^2.2.5",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.0",
     "styled-jsx": "^3.3.2",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "yup": "^0.31.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-app-rewired  start",
+    "build": "react-app-rewired  build ",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
