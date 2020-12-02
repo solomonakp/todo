@@ -3,19 +3,16 @@ import ReactDOM from 'react-dom';
 // bootstrap
 // import minified css
 import 'bootstrap/dist/css/bootstrap.min.css';
-// importing jquery global method
-import $ from 'jquery';
-// importing Pooper js
-import Popper from 'popper.js';
-// importing minified bootstrap js file
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-import './index.css';
+import { Provider } from 'react-redux';
+import store from './redux/store.js';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
