@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Input } from './inputComponents';
 import { Formik, Form } from 'formik';
-import { Mail, Password, LogoLight } from './svgs';
+import { Mail, Password } from './svgs';
 import * as Yup from 'yup';
 import capitalize from 'lodash/capitalize';
 
@@ -71,11 +71,7 @@ class Register extends Component {
         >
           {(props) => (
             <Form onSubmit={props.handleSubmit}>
-              <div className='logo pb-4'>
-                <Link to='/'>
-                  <LogoLight />
-                </Link>
-              </div>
+              <div className='logo pb-4'></div>
               <h3>Welcome !</h3>
               <p>Complete the fields below to create an account.</p>
               {/* inputs  */}

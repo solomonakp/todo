@@ -12,7 +12,7 @@ import {
 
 const initialState = {
   isLoading: false,
-  token: localStorage.getItem('tyremanToken'),
+  token: localStorage.getItem('todoToken'),
   isAuthenticated: null,
   user: null,
   isSubmitting: false,
@@ -39,7 +39,7 @@ export default function (state = initialState, action) {
       };
     case LOGIN_SUCCESS:
     case REGISTER_SUCCESS:
-      localStorage.setItem('tyremanToken', action.payload.token);
+      localStorage.setItem('todoToken', action.payload.token);
       return {
         ...state,
         ...action.payload,
@@ -52,7 +52,7 @@ export default function (state = initialState, action) {
     case LOGOUT_SUCCESS:
     case AUTH_ERROR:
     case REGISTER_FAIL:
-      localStorage.removeItem('tyremanToken');
+      localStorage.removeItem('todoToken');
       return {
         ...state,
         isAuthenticated: false,

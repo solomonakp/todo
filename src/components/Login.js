@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Formik, Form } from 'formik';
 import { Button, Input } from './inputComponents';
-import { Mail, Password, LogoLight } from './svgs';
+import { Mail, Password } from './svgs';
 import * as Yup from 'yup';
 import { Redirect } from 'react-router-dom';
 class Login extends Component {
@@ -27,11 +27,7 @@ class Login extends Component {
         >
           {(props) => (
             <Form onSubmit={props.handleSubmit}>
-              <div className='logo pb-5'>
-                <Link to='/'>
-                  <LogoLight />
-                </Link>
-              </div>
+              <div className='logo pb-5'></div>
               <h3>Welcome back!</h3>
               <p>Login to your account with your username and password</p>
               <div className='row w-100'>

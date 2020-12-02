@@ -1,10 +1,9 @@
 import Login from '../components/Login';
 import Register from '../components/Register';
-import { Helmet } from 'react-helmet';
 import React, { Component } from 'react';
 import theme from '../components/theme';
-import auth from '../assets/img/auth.png';
-import authAlt from '../assets/img/auth-alt.png';
+import auth from '../assets/Group 472.png';
+
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { registerUser } from '../redux/actions/authActions';
@@ -95,10 +94,6 @@ class Auth extends Component {
     const { isRegister } = this.props;
     return (
       <div className='auth-body'>
-        <Helmet>
-          <title>Sign In/Sign up </title>
-        </Helmet>
-
         <div className='auth container-lg'>
           <Login {...this.props} />
           <Register {...this.props} />
@@ -188,14 +183,14 @@ class Auth extends Component {
                 background-attachment: inherit;
               }
               .overlay-left {
-                background: url(${authAlt});
+                background: ${theme.colors.primaryLight};
                 transform: ${isRegister
                   ? 'translateX(0%)'
                   : 'translateX(-20%)'};
                 transform-origin: ${isRegister ? 'left' : 'right'};
               }
               .overlay-right {
-                background: url(${auth});
+                background: ${theme.colors.primary};
                 right: 0;
                 transform: ${isRegister ? 'translateX(20%)' : 'translateX(0%)'};
                 transform-origin: ${isRegister ? 'right' : 'left'};
